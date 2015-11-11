@@ -10,7 +10,9 @@ None.
 
 ## Role Variables
 
-None.
+```yaml
+elasticsearch_version: "2.x"
+```
 
 ## Dependencies
 

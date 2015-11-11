@@ -1,14 +1,14 @@
 ---
-- name: Add Elasticsearch GPG key.
+- name: Add elasticsearch GPG key
   rpm_key:
-    key: http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+    key: https://packages.elastic.co/GPG-KEY-elasticsearch
     state: present
 
-- name: Add Elasticsearch repository.
+- name: Add elasticsearch repository
   copy:
     src: elasticsearch.repo
     dest: /etc/yum.repos.d/elasticsearch.repo
     mode: 0644
 
-- name: Install Elasticsearch.
+- name: Install elasticsearch
   yum: pkg=elasticsearch state=installed
